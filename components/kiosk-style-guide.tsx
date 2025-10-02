@@ -27,6 +27,9 @@ import {
   MoreHorizontal,
   AlertCircle,
   CheckCircle,
+  ShoppingBag,
+  Utensils,
+  Monitor,
 } from "lucide-react";
 
 export default function KioskStyleGuide() {
@@ -1223,6 +1226,275 @@ export default function KioskStyleGuide() {
                       </div>
                       <div className="text-sm text-muted-foreground">
                         Complete payment with cashier
+                      </div>
+                    </div>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Order Method Cards */}
+      <section className="space-y-6">
+        <h2 className="text-4xl font-black text-foreground">
+          Order Method Cards
+        </h2>
+        <Card className="p-8">
+          <CardContent className="space-y-8">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-foreground">
+                How would you like to order?
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Choose your preferred ordering method to get started
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {/* Takeaway Option */}
+                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-primary group">
+                  <div className="h-32 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
+                    <ShoppingBag className="h-16 w-16 text-primary group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-2xl font-bold text-foreground">
+                      Takeaway
+                    </CardTitle>
+                    <CardDescription className="text-lg text-muted-foreground">
+                      Order to go and take with you
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4 pt-0">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-primary" />
+                        <span>Quick & Convenient</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-primary" />
+                        <span>Perfect for Busy Days</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-primary" />
+                        <span>Eco-Friendly Packaging</span>
+                      </div>
+                    </div>
+                    <Button className="w-full text-lg py-4 h-auto group-hover:bg-primary/90 transition-colors duration-300">
+                      <ShoppingBag className="mr-2 h-6 w-6" />
+                      Order Takeaway
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Eat In Option */}
+                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-accent group">
+                  <div className="h-32 bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center group-hover:from-accent/30 group-hover:to-primary/30 transition-all duration-300">
+                    <Utensils className="h-16 w-16 text-accent group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-2xl font-bold text-foreground">
+                      Eat In
+                    </CardTitle>
+                    <CardDescription className="text-lg text-muted-foreground">
+                      Dine in our comfortable restaurant
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4 pt-0">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-accent" />
+                        <span>Full Service Experience</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-accent" />
+                        <span>Fresh & Hot Food</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-accent" />
+                        <span>Comfortable Seating</span>
+                      </div>
+                    </div>
+                    <Button
+                      variant="outline"
+                      className="w-full text-lg py-4 h-auto border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground group-hover:border-accent/80 transition-all duration-300 bg-transparent"
+                    >
+                      <Utensils className="mr-2 h-6 w-6" />
+                      Dine In
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Online Collection Option */}
+                <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-primary group">
+                  <div className="h-32 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
+                    <Monitor className="h-16 w-16 text-primary group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <CardHeader className="text-center pb-4">
+                    <CardTitle className="text-2xl font-bold text-foreground">
+                      Online Collection
+                    </CardTitle>
+                    <CardDescription className="text-lg text-muted-foreground">
+                      Order online and collect when ready
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4 pt-0">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-primary" />
+                        <span>Skip the Queue</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-primary" />
+                        <span>Order at Your Pace</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                        <CheckCircle className="h-4 w-4 text-primary" />
+                        <span>Real-time Updates</span>
+                      </div>
+                    </div>
+                    <Button className="w-full text-lg py-4 h-auto group-hover:bg-primary/90 transition-colors duration-300">
+                      <Monitor className="mr-2 h-6 w-6" />
+                      Order Online
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Compact Version */}
+              <div className="space-y-4 pt-8 border-t border-border">
+                <h3 className="text-2xl font-bold text-foreground">
+                  Compact Version
+                </h3>
+                <p className="text-lg text-muted-foreground">
+                  Space-efficient layout for smaller screens or secondary
+                  placement
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                  <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-primary group">
+                    <CardContent className="p-6">
+                      <div className="flex items-center space-x-4">
+                        <div className="h-16 w-16 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                          <ShoppingBag className="h-8 w-8 text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-xl font-bold text-foreground">
+                            Takeaway
+                          </h4>
+                          <p className="text-sm text-muted-foreground">
+                            Order to go
+                          </p>
+                          <Badge className="mt-2 bg-primary text-primary-foreground text-xs px-2 py-1">
+                            Popular
+                          </Badge>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-accent group">
+                    <CardContent className="p-6">
+                      <div className="flex items-center space-x-4">
+                        <div className="h-16 w-16 bg-accent/20 rounded-lg flex items-center justify-center group-hover:bg-accent/30 transition-colors duration-300">
+                          <Utensils className="h-8 w-8 text-accent" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-xl font-bold text-foreground">
+                            Eat In
+                          </h4>
+                          <p className="text-sm text-muted-foreground">
+                            Dine with us
+                          </p>
+                          <Badge
+                            variant="outline"
+                            className="mt-2 border-accent text-accent text-xs px-2 py-1 bg-transparent"
+                          >
+                            Full Service
+                          </Badge>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-primary group">
+                    <CardContent className="p-6">
+                      <div className="flex items-center space-x-4">
+                        <div className="h-16 w-16 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                          <Monitor className="h-8 w-8 text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-xl font-bold text-foreground">
+                            Online Collection
+                          </h4>
+                          <p className="text-sm text-muted-foreground">
+                            Order ahead
+                          </p>
+                          <Badge
+                            variant="outline"
+                            className="mt-2 border-primary text-primary text-xs px-2 py-1 bg-transparent"
+                          >
+                            Skip Queue
+                          </Badge>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              {/* Mobile-First Version */}
+              <div className="space-y-4 pt-8 border-t border-border">
+                <h3 className="text-2xl font-bold text-foreground">
+                  Mobile-First Version
+                </h3>
+                <p className="text-lg text-muted-foreground">
+                  Optimized for touch interaction on smaller screens
+                </p>
+
+                <div className="space-y-4 max-w-md mx-auto">
+                  <Button
+                    className="w-full h-20 text-lg justify-start space-x-4 hover:shadow-lg transition-all duration-300 group"
+                    size="lg"
+                  >
+                    <div className="h-12 w-12 bg-primary-foreground/20 rounded-lg flex items-center justify-center">
+                      <ShoppingBag className="h-8 w-8 text-primary-foreground" />
+                    </div>
+                    <div className="text-left">
+                      <div className="font-bold">Takeaway</div>
+                      <div className="text-sm opacity-90">
+                        Order to go and take with you
+                      </div>
+                    </div>
+                  </Button>
+
+                  <Button
+                    variant="outline"
+                    className="w-full h-20 text-lg justify-start space-x-4 hover:shadow-lg transition-all duration-300 border-2 bg-transparent"
+                    size="lg"
+                  >
+                    <div className="h-12 w-12 bg-accent/20 rounded-lg flex items-center justify-center">
+                      <Utensils className="h-8 w-8 text-accent" />
+                    </div>
+                    <div className="text-left">
+                      <div className="font-bold text-foreground">Eat In</div>
+                      <div className="text-sm text-muted-foreground">
+                        Dine in our comfortable restaurant
+                      </div>
+                    </div>
+                  </Button>
+
+                  <Button
+                    className="w-full h-20 text-lg justify-start space-x-4 hover:shadow-lg transition-all duration-300 group"
+                    size="lg"
+                  >
+                    <div className="h-12 w-12 bg-primary-foreground/20 rounded-lg flex items-center justify-center">
+                      <Monitor className="h-8 w-8 text-primary-foreground" />
+                    </div>
+                    <div className="text-left">
+                      <div className="font-bold">Online Collection</div>
+                      <div className="text-sm opacity-90">
+                        Order online and collect when ready
                       </div>
                     </div>
                   </Button>
