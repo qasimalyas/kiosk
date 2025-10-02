@@ -30,6 +30,9 @@ import {
   ShoppingBag,
   Utensils,
   Monitor,
+  Cherry,
+  Beef,
+  Milk,
 } from "lucide-react";
 
 export default function KioskStyleGuide() {
@@ -1498,6 +1501,412 @@ export default function KioskStyleGuide() {
                       </div>
                     </div>
                   </Button>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Ingredient Cards */}
+      <section className="space-y-6">
+        <h2 className="text-4xl font-black text-foreground">
+          Ingredient Cards
+        </h2>
+        <Card className="p-8">
+          <CardContent className="space-y-8">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-foreground">
+                Customize your order
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Select ingredients to add or remove from your meal
+              </p>
+
+              {/* 3x4 Grid Layout */}
+              <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
+                {/* Free Ingredients */}
+                <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-primary group bg-secondary/20">
+                  <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3">
+                    <div className="h-12 w-12 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                      <Utensils className="h-8 w-8 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-foreground">
+                        Lettuce
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Fresh & crispy
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Selected Free Ingredient */}
+                <Card className="aspect-square transition-all duration-300 cursor-pointer border-2 border-primary bg-primary/10 shadow-lg">
+                  <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3 relative">
+                    <div className="absolute top-2 right-2">
+                      <CheckCircle className="h-6 w-6 text-primary" />
+                    </div>
+                    <div className="h-12 w-12 bg-primary/30 rounded-lg flex items-center justify-center">
+                      <Cherry className="h-8 w-8 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-foreground">
+                        Tomato
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Vine ripened
+                      </p>
+                      <Badge
+                        variant="secondary"
+                        className="bg-primary/20 text-primary text-xs px-2 py-1 mt-1"
+                      >
+                        Selected
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-primary group bg-secondary/20">
+                  <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3">
+                    <div className="h-12 w-12 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                      <Package className="h-8 w-8 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-foreground">
+                        Onion
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Caramelized
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Selected Premium Ingredient */}
+                <Card className="aspect-square transition-all duration-300 cursor-pointer border-2 border-accent bg-accent/10 shadow-lg">
+                  <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3 relative">
+                    <div className="absolute top-2 right-2">
+                      <CheckCircle className="h-6 w-6 text-accent" />
+                    </div>
+                    <div className="h-12 w-12 bg-accent/30 rounded-lg flex items-center justify-center">
+                      <Beef className="h-8 w-8 text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-foreground">
+                        Extra Bacon
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Crispy smoked
+                      </p>
+                      <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
+                        +$2.50
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-accent group">
+                  <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3">
+                    <div className="h-12 w-12 bg-accent/20 rounded-lg flex items-center justify-center group-hover:bg-accent/30 transition-colors duration-300">
+                      <Milk className="h-8 w-8 text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-foreground">
+                        Avocado
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Fresh sliced
+                      </p>
+                      <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
+                        +$1.50
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-accent group">
+                  <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3">
+                    <div className="h-12 w-12 bg-accent/20 rounded-lg flex items-center justify-center group-hover:bg-accent/30 transition-colors duration-300">
+                      <Package className="h-8 w-8 text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-foreground">
+                        Extra Cheese
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Aged cheddar
+                      </p>
+                      <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
+                        +$1.00
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-primary group bg-secondary/20">
+                  <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3">
+                    <div className="h-12 w-12 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                      <Package className="h-8 w-8 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-foreground">
+                        Pickles
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Tangy dill
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Unavailable Ingredient */}
+                <Card className="aspect-square cursor-not-allowed border-2 border-muted bg-muted/20 opacity-60">
+                  <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3">
+                    <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center">
+                      <Package className="h-8 w-8 text-muted-foreground" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-muted-foreground">
+                        Mushrooms
+                      </h4>
+                      <p className="text-sm text-muted-foreground">Sautéed</p>
+                      <Badge
+                        variant="secondary"
+                        className="bg-muted text-muted-foreground text-xs px-2 py-1 mt-1"
+                      >
+                        Unavailable
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-accent group">
+                  <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3">
+                    <div className="h-12 w-12 bg-accent/20 rounded-lg flex items-center justify-center group-hover:bg-accent/30 transition-colors duration-300">
+                      <Package className="h-8 w-8 text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-foreground">
+                        Jalapeños
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Spicy kick
+                      </p>
+                      <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
+                        +$0.75
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-primary group bg-secondary/20">
+                  <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3">
+                    <div className="h-12 w-12 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                      <Package className="h-8 w-8 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-foreground">
+                        Cucumber
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Fresh sliced
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-accent group">
+                  <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3">
+                    <div className="h-12 w-12 bg-accent/20 rounded-lg flex items-center justify-center group-hover:bg-accent/30 transition-colors duration-300">
+                      <Beef className="h-8 w-8 text-accent" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-foreground">
+                        Grilled Chicken
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Herb seasoned
+                      </p>
+                      <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
+                        +$3.50
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Selected State Examples */}
+              <div className="space-y-4 pt-8 border-t border-border">
+                <h3 className="text-2xl font-bold text-foreground">
+                  Selected States
+                </h3>
+                <p className="text-lg text-muted-foreground">
+                  Visual feedback when ingredients are selected
+                </p>
+
+                <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+                  {/* Selected Free Ingredient */}
+                  <Card className="aspect-square transition-all duration-300 cursor-pointer border-2 border-primary bg-primary/10 shadow-lg">
+                    <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3 relative">
+                      <div className="absolute top-2 right-2">
+                        <CheckCircle className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="h-12 w-12 bg-primary/30 rounded-lg flex items-center justify-center">
+                        <Cherry className="h-8 w-8 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-foreground">
+                          Tomato
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                          Vine ripened
+                        </p>
+                        <Badge
+                          variant="secondary"
+                          className="bg-primary/20 text-primary text-xs px-2 py-1 mt-1"
+                        >
+                          Selected
+                        </Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Selected Premium Ingredient */}
+                  <Card className="aspect-square transition-all duration-300 cursor-pointer border-2 border-accent bg-accent/10 shadow-lg">
+                    <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3 relative">
+                      <div className="absolute top-2 right-2">
+                        <CheckCircle className="h-6 w-6 text-accent" />
+                      </div>
+                      <div className="h-12 w-12 bg-accent/30 rounded-lg flex items-center justify-center">
+                        <Beef className="h-8 w-8 text-accent" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-foreground">
+                          Extra Bacon
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                          Crispy smoked
+                        </p>
+                        <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
+                          +$2.50
+                        </Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Disabled/Unavailable Ingredient */}
+                  <Card className="aspect-square cursor-not-allowed border-2 border-muted bg-muted/20 opacity-60">
+                    <CardContent className="p-4 h-full flex flex-col items-center justify-center text-center space-y-3">
+                      <div className="h-12 w-12 bg-muted rounded-lg flex items-center justify-center">
+                        <Package className="h-8 w-8 text-muted-foreground" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-bold text-muted-foreground">
+                          Spinach
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                          Fresh leaves
+                        </p>
+                        <Badge
+                          variant="secondary"
+                          className="bg-muted text-muted-foreground text-xs px-2 py-1 mt-1"
+                        >
+                          Unavailable
+                        </Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              {/* Compact Version for Smaller Screens */}
+              <div className="space-y-4 pt-8 border-t border-border">
+                <h3 className="text-2xl font-bold text-foreground">
+                  Compact Version
+                </h3>
+                <p className="text-lg text-muted-foreground">
+                  Smaller cards for mobile or limited space
+                </p>
+
+                <div className="grid grid-cols-4 gap-3 max-w-2xl mx-auto">
+                  {/* Selected Free Ingredient */}
+                  <Card className="aspect-square transition-all duration-300 cursor-pointer border-2 border-primary bg-primary/10 shadow-lg">
+                    <CardContent className="p-3 h-full flex flex-col items-center justify-center text-center space-y-2 relative">
+                      <div className="absolute top-1 right-1">
+                        <CheckCircle className="h-4 w-4 text-primary" />
+                      </div>
+                      <div className="h-8 w-8 bg-primary/30 rounded-lg flex items-center justify-center">
+                        <Cherry className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-foreground">
+                          Tomato
+                        </h4>
+                        <Badge
+                          variant="secondary"
+                          className="bg-primary/20 text-primary text-xs px-1 py-0.5"
+                        >
+                          Selected
+                        </Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Selected Premium Ingredient */}
+                  <Card className="aspect-square transition-all duration-300 cursor-pointer border-2 border-accent bg-accent/10 shadow-lg">
+                    <CardContent className="p-3 h-full flex flex-col items-center justify-center text-center space-y-2 relative">
+                      <div className="absolute top-1 right-1">
+                        <CheckCircle className="h-4 w-4 text-accent" />
+                      </div>
+                      <div className="h-8 w-8 bg-accent/30 rounded-lg flex items-center justify-center">
+                        <Beef className="h-6 w-6 text-accent" />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-foreground">
+                          Bacon
+                        </h4>
+                        <Badge className="bg-accent text-accent-foreground text-xs px-1 py-0.5">
+                          +$2.50
+                        </Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Regular Free Ingredient */}
+                  <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-primary group bg-secondary/20">
+                    <CardContent className="p-3 h-full flex flex-col items-center justify-center text-center space-y-2">
+                      <div className="h-8 w-8 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                        <Package className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-foreground">
+                          Lettuce
+                        </h4>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Unavailable Ingredient */}
+                  <Card className="aspect-square cursor-not-allowed border-2 border-muted bg-muted/20 opacity-60">
+                    <CardContent className="p-3 h-full flex flex-col items-center justify-center text-center space-y-2">
+                      <div className="h-8 w-8 bg-muted rounded-lg flex items-center justify-center">
+                        <Milk className="h-6 w-6 text-muted-foreground" />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-muted-foreground">
+                          Avocado
+                        </h4>
+                        <Badge
+                          variant="secondary"
+                          className="bg-muted text-muted-foreground text-xs px-1 py-0.5"
+                        >
+                          Unavailable
+                        </Badge>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </div>
             </div>
