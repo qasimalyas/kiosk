@@ -236,7 +236,7 @@ export default function KioskStyleGuide() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-3xl font-bold text-primary">$299</span>
+                <span className="text-3xl font-bold text-primary">£299</span>
                 <div className="flex items-center space-x-1">
                   <Star className="h-5 w-5 fill-accent text-accent" />
                   <Star className="h-5 w-5 fill-accent text-accent" />
@@ -789,7 +789,7 @@ export default function KioskStyleGuide() {
                       htmlFor="standard"
                       className="text-lg cursor-pointer"
                     >
-                      Standard Delivery ($5.99)
+                      Standard Delivery (£5.99)
                     </Label>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -801,7 +801,7 @@ export default function KioskStyleGuide() {
                       className="h-6 w-6 text-primary border-2 border-border focus:ring-primary focus:ring-2"
                     />
                     <Label htmlFor="express" className="text-lg cursor-pointer">
-                      Express Delivery ($12.99)
+                      Express Delivery (£12.99)
                     </Label>
                   </div>
                 </div>
@@ -827,7 +827,7 @@ export default function KioskStyleGuide() {
                       htmlFor="warranty"
                       className="text-lg cursor-pointer"
                     >
-                      Extended Warranty (+$49.99)
+                      Extended Warranty (+£49.99)
                     </Label>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -840,7 +840,7 @@ export default function KioskStyleGuide() {
                       htmlFor="installation"
                       className="text-lg cursor-pointer"
                     >
-                      Professional Installation (+$99.99)
+                      Professional Installation (+£99.99)
                     </Label>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -1602,7 +1602,7 @@ export default function KioskStyleGuide() {
                         Crispy smoked
                       </p>
                       <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
-                        +$2.50
+                        +£2.50
                       </Badge>
                     </div>
                   </CardContent>
@@ -1621,7 +1621,7 @@ export default function KioskStyleGuide() {
                         Fresh sliced
                       </p>
                       <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
-                        +$1.50
+                        +£1.50
                       </Badge>
                     </div>
                   </CardContent>
@@ -1640,7 +1640,7 @@ export default function KioskStyleGuide() {
                         Aged cheddar
                       </p>
                       <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
-                        +$1.00
+                        +£1.00
                       </Badge>
                     </div>
                   </CardContent>
@@ -1696,7 +1696,7 @@ export default function KioskStyleGuide() {
                         Spicy kick
                       </p>
                       <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
-                        +$0.75
+                        +£0.75
                       </Badge>
                     </div>
                   </CardContent>
@@ -1731,7 +1731,7 @@ export default function KioskStyleGuide() {
                         Herb seasoned
                       </p>
                       <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
-                        +$3.50
+                        +£3.50
                       </Badge>
                     </div>
                   </CardContent>
@@ -1791,7 +1791,7 @@ export default function KioskStyleGuide() {
                           Crispy smoked
                         </p>
                         <Badge className="bg-accent text-accent-foreground text-sm px-2 py-1 mt-1">
-                          +$2.50
+                          +£2.50
                         </Badge>
                       </div>
                     </CardContent>
@@ -1869,7 +1869,7 @@ export default function KioskStyleGuide() {
                           Bacon
                         </h4>
                         <Badge className="bg-accent text-accent-foreground text-xs px-1 py-0.5">
-                          +$2.50
+                          +£2.50
                         </Badge>
                       </div>
                     </CardContent>
@@ -1941,7 +1941,7 @@ export default function KioskStyleGuide() {
                             Classic Burger
                           </h4>
                           <span className="text-xl font-bold text-foreground">
-                            $12.99
+                            £12.99
                           </span>
                         </div>
 
@@ -1952,7 +1952,7 @@ export default function KioskStyleGuide() {
                               + Extra Bacon
                             </span>
                             <span className="text-accent font-semibold">
-                              +$2.50
+                              +£2.50
                             </span>
                           </div>
                           <div className="flex items-center justify-between text-sm">
@@ -1960,14 +1960,14 @@ export default function KioskStyleGuide() {
                               + Avocado
                             </span>
                             <span className="text-accent font-semibold">
-                              +$1.50
+                              +£1.50
                             </span>
                           </div>
                           <div className="flex items-center justify-between text-sm">
                             <span className="text-muted-foreground">
                               - No Pickles
                             </span>
-                            <span className="text-muted-foreground">$0.00</span>
+                            <span className="text-muted-foreground">£0.00</span>
                           </div>
                         </div>
 
@@ -1977,7 +1977,7 @@ export default function KioskStyleGuide() {
                             Item Total:
                           </span>
                           <span className="text-lg font-bold text-primary">
-                            $16.99
+                            £16.99
                           </span>
                         </div>
                       </div>
@@ -2022,7 +2022,7 @@ export default function KioskStyleGuide() {
                             French Fries
                           </h4>
                           <span className="text-xl font-bold text-foreground">
-                            $4.99
+                            £4.99
                           </span>
                         </div>
 
@@ -2036,7 +2036,7 @@ export default function KioskStyleGuide() {
                             Item Total:
                           </span>
                           <span className="text-lg font-bold text-primary">
-                            $4.99
+                            £4.99
                           </span>
                         </div>
                       </div>
@@ -2081,7 +2081,7 @@ export default function KioskStyleGuide() {
                             Large Coke
                           </h4>
                           <span className="text-xl font-bold text-foreground">
-                            $3.49
+                            £3.49
                           </span>
                         </div>
 
@@ -2091,7 +2091,7 @@ export default function KioskStyleGuide() {
                             <span className="text-muted-foreground">
                               Extra Ice
                             </span>
-                            <span className="text-muted-foreground">$0.00</span>
+                            <span className="text-muted-foreground">£0.00</span>
                           </div>
                         </div>
 
@@ -2101,7 +2101,7 @@ export default function KioskStyleGuide() {
                             Item Total:
                           </span>
                           <span className="text-lg font-bold text-primary">
-                            $3.49
+                            £3.49
                           </span>
                         </div>
                       </div>
@@ -2148,32 +2148,32 @@ export default function KioskStyleGuide() {
                       <span className="text-foreground">
                         Classic Burger × 2
                       </span>
-                      <span className="text-foreground">$33.98</span>
+                      <span className="text-foreground">£33.98</span>
                     </div>
                     <div className="flex items-center justify-between text-lg">
                       <span className="text-foreground">French Fries × 1</span>
-                      <span className="text-foreground">$4.99</span>
+                      <span className="text-foreground">£4.99</span>
                     </div>
                     <div className="flex items-center justify-between text-lg">
                       <span className="text-foreground">Large Coke × 1</span>
-                      <span className="text-foreground">$3.49</span>
+                      <span className="text-foreground">£3.49</span>
                     </div>
 
                     <div className="border-t-2 border-border pt-3">
                       <div className="flex items-center justify-between text-lg">
                         <span className="text-foreground">Subtotal</span>
-                        <span className="text-foreground">$42.46</span>
+                        <span className="text-foreground">£42.46</span>
                       </div>
                       <div className="flex items-center justify-between text-lg">
                         <span className="text-foreground">Tax (8.5%)</span>
-                        <span className="text-foreground">$3.61</span>
+                        <span className="text-foreground">£3.61</span>
                       </div>
                     </div>
 
                     <div className="border-t-2 border-primary pt-3">
                       <div className="flex items-center justify-between text-2xl font-bold">
                         <span className="text-foreground">Total</span>
-                        <span className="text-primary">$46.07</span>
+                        <span className="text-primary">£46.07</span>
                       </div>
                     </div>
                   </div>
@@ -2181,7 +2181,7 @@ export default function KioskStyleGuide() {
                   {/* Checkout Button */}
                   <Button className="w-full text-xl py-6 h-auto mt-6">
                     <CreditCard className="mr-3 h-6 w-6" />
-                    Proceed to Checkout - $46.07
+                    Proceed to Checkout - £46.07
                   </Button>
                 </CardContent>
               </Card>
@@ -2216,7 +2216,7 @@ export default function KioskStyleGuide() {
 
                         {/* Customizations */}
                         <div className="text-sm text-muted-foreground">
-                          + Extra Bacon (+$2.50), + Avocado (+$1.50), - No
+                          + Extra Bacon (+£2.50), + Avocado (+£1.50), - No
                           Pickles
                         </div>
 
@@ -2238,7 +2238,7 @@ export default function KioskStyleGuide() {
                             </Button>
                           </div>
                           <span className="text-lg font-bold text-primary">
-                            $33.98
+                            £33.98
                           </span>
                         </div>
                       </div>
@@ -2250,20 +2250,20 @@ export default function KioskStyleGuide() {
                     <CardContent className="p-4 space-y-3">
                       <div className="flex items-center justify-between text-lg">
                         <span className="text-foreground">Subtotal</span>
-                        <span className="text-foreground">$42.46</span>
+                        <span className="text-foreground">£42.46</span>
                       </div>
                       <div className="flex items-center justify-between text-lg">
                         <span className="text-foreground">Tax</span>
-                        <span className="text-foreground">$3.61</span>
+                        <span className="text-foreground">£3.61</span>
                       </div>
                       <div className="border-t border-border pt-3">
                         <div className="flex items-center justify-between text-xl font-bold">
                           <span className="text-foreground">Total</span>
-                          <span className="text-primary">$46.07</span>
+                          <span className="text-primary">£46.07</span>
                         </div>
                       </div>
                       <Button className="w-full text-lg py-4 h-auto mt-3">
-                        Checkout - $46.07
+                        Checkout - £46.07
                       </Button>
                     </CardContent>
                   </Card>
