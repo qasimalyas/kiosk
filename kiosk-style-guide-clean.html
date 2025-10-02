@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiosk Style Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #15803d;
+            --primary-foreground: #ffffff;
+            --accent: #84cc16;
+            --accent-foreground: #1a2e05;
+            --secondary: #f0fdf4;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --background: #ffffff;
+            --foreground: #374151;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--foreground);
+            background: var(--background);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+        /* Typography */
+        h1 {
+            font-size: 3.75rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--muted);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        /* Color Swatches */
+        .color-swatch {
+            height: 6rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .swatch-primary { background: var(--primary); }
+        .swatch-accent { background: var(--accent); }
+        .swatch-secondary { background: var(--secondary); border: 1px solid var(--border); }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            border: none;
+            cursor: pointer;
+            min-height: 48px;
+            margin: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .btn-primary:hover {
+            background: #166534;
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            color: var(--accent-foreground);
+        }
+
+        .btn-accent:hover {
+            background: #65a30d;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        /* Tags */
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            margin: 0.25rem;
+        }
+
+        .tag-primary {
+            background: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .tag-accent {
+            background: var(--accent);
+            color: var(--accent-foreground);
+        }
+
+        .tag-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+
+        .input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.125rem;
+            border: 2px solid var(--border);
+            border-radius: 0.375rem;
+            min-height: 48px;
+        }
+
+        .input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .checkbox, .radio {
+            width: 1.5rem;
+            height: 1.5rem;
+            accent-color: var(--primary);
+        }
+
+        /* Shopping Icons */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .icon-box {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary);
+            color: var(--primary-foreground);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+        }
+
+        .page-btn {
+            width: 3rem;
+            height: 3rem;
+            border: 2px solid var(--border);
+            background: transparent;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .page-btn.active {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            border-color: var(--primary);
+        }
+
+        .flex {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="section text-center">
+            <h1>Kiosk Style Guide</h1>
+            <p>A comprehensive design system for touch-friendly retail kiosk interfaces</p>
+        </div>
+
+        <!-- Color Palette -->
+        <section class="section">
+            <h2>Color Palette</h2>
+            <div class="grid grid-4">
+                <div class="text-center">
+                    <div class="color-swatch swatch-primary"></div>
+                    <h3>Primary</h3>
+                    <p>#15803d</p>
+                </div>
+                <div class="text-center">
+                    <div class="color-swatch swatch-accent"></div>
+                    <h3>Accent</h3>
+                    <p>#84cc16</p>
+                </div>
+                <div class="text-center">
+                    <div class="color-swatch swatch-secondary"></div>
+                    <h3>Secondary</h3>
+                    <p>#f0fdf4</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="section">
+            <h2>Buttons</h2>
+            <div class="card">
+                <h3>Primary Buttons</h3>
+                <div class="flex">
+                    <button class="btn btn-primary">Add to Cart</button>
+                    <button class="btn btn-accent">Quick Buy</button>
+                    <button class="btn btn-outline">View Details</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tags -->
+        <section class="section">
+            <h2>Tags</h2>
+            <div class="card">
+                <div class="flex">
+                    <span class="tag tag-primary">New</span>
+                    <span class="tag tag-accent">Popular</span>
+                    <span class="tag tag-outline">Sale</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Cards -->
+        <section class="section">
+            <h2>Service Options</h2>
+            <div class="grid grid-3">
+                <div class="card" style="border: 2px solid var(--primary); cursor: pointer;" onclick="selectPayment('card')">
+                    <div class="text-center">
+                        <div class="icon-box" style="margin: 0 auto 1rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 7h14l-1 10H6L5 7Z"/>
+                                <circle cx="9" cy="20" r="1"/>
+                                <circle cx="15" cy="20" r="1"/>
+                            </svg>
+                        </div>
+                        <h3>Takeaway <span class="tag tag-primary">Fast</span></h3>
+                        <p>Order and take your food to go</p>
+                        <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Order Takeaway</button>
+                    </div>
+                </div>
+
+                <div class="card" style="border: 2px solid var(--accent); cursor: pointer;" onclick="selectPayment('counter')">
+                    <div class="text-center">
+                        <div class="icon-box" style="margin: 0 auto 1rem; background: var(--accent); color: var(--accent-foreground);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h3>Collection <span class="tag tag-accent">Ready</span></h3>
+                        <p>Pick up your pre-ordered items</p>
+                        <button class="btn btn-accent" style="margin-top: 1rem; width: 100%;">Collect Order</button>
+                    </div>
+                </div>
+
+                <div class="card" style="border: 2px solid #f59e0b;">
+                    <div class="text-center">
+                        <div class="icon-box" style="margin: 0 auto 1rem; background: #f59e0b;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 12h18l-2 8H5l-2-8Z"/>
+                                <path d="M12 2v10"/>
+                            </svg>
+                        </div>
+                        <h3>Dine-in <span class="tag" style="background: #f59e0b; color: white;">Comfort</span></h3>
+                        <p>Enjoy your meal in our restaurant</p>
+                        <button class="btn" style="background: #f59e0b; color: white; margin-top: 1rem; width: 100%;">Reserve Table</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Options -->
+        <section class="section">
+            <h2>Payment Options</h2>
+            <div class="grid grid-3">
+                <div class="card" style="border: 2px solid var(--primary); cursor: pointer;" onclick="selectPayment('card')">
+                    <div class="text-center">
+                        <div class="icon-box" style="margin: 0 auto 1rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="20" height="14" x="2" y="5" rx="2"/>
+                                <line x1="2" x2="22" y1="10" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3>Pay by Card <span class="tag tag-primary">Instant</span></h3>
+                        <p>Pay immediately with your card</p>
+                        <p style="font-size: 0.875rem; margin-top: 0.5rem;">• Contactless payment<br>• Instant confirmation<br>• Receipt via email</p>
+                        <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Pay Now</button>
+                    </div>
+                </div>
+
+                <div class="card" style="border: 2px solid var(--accent); cursor: pointer;" onclick="selectPayment('counter')">
+                    <div class="text-center">
+                        <div class="icon-box" style="margin: 0 auto 1rem; background: var(--accent); color: var(--accent-foreground);">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                                <path d="M8 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+                            </svg>
+                        </div>
+                        <h3>Pay at Counter <span class="tag tag-accent">Flexible</span></h3>
+                        <p>Complete payment with our staff</p>
+                        <p style="font-size: 0.875rem; margin-top: 0.5rem;">• Cash or card accepted<br>• Personal assistance<br>• Order modifications</p>
+                        <button class="btn btn-accent" style="margin-top: 1rem; width: 100%;">Order & Pay Later</button>
+                    </div>
+                </div>
+
+                <div class="card" style="border: 2px solid #6b7280; opacity: 0.6;">
+                    <div class="text-center">
+                        <div class="icon-box" style="margin: 0 auto 1rem; background: #6b7280;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 1v6m0 6v6"/>
+                                <path d="m15 14 3 3-3 3"/>
+                                <path d="M6 3h2a4 4 0 0 1 4 4v14a3 3 0 0 0 3-3V7a5 5 0 0 0-5-5H6z"/>
+                            </svg>
+                        </div>
+                        <h3>Mobile Payment <span class="tag" style="background: #6b7280; color: white;">Coming Soon</span></h3>
+                        <p>Pay with your mobile wallet</p>
+                        <p style="font-size: 0.875rem; margin-top: 0.5rem;">• Apple Pay & Google Pay<br>• Quick & secure<br>• Available soon</p>
+                        <button class="btn" style="background: #6b7280; color: white; margin-top: 1rem; width: 100%;" disabled>Coming Soon</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Selection Form -->
+            <div class="card" style="margin-top: 2rem;">
+                <h3>Select Payment Method</h3>
+                <div class="form-group">
+                    <label class="label" style="display: flex; align-items: center; padding: 1rem; border: 2px solid var(--border); border-radius: 0.375rem; margin-bottom: 1rem; cursor: pointer;">
+                        <input type="radio" class="radio" name="payment" value="card" style="margin-right: 1rem;">
+                        <div style="display: flex; align-items: center; flex: 1;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 1rem; color: var(--primary);">
+                                <rect width="20" height="14" x="2" y="5" rx="2"/>
+                                <line x1="2" x2="22" y1="10" y2="10"/>
+                            </svg>
+                            <div>
+                                <strong>Pay by Card Now</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--muted);">Instant payment with contactless card</p>
+                            </div>
+                        </div>
+                        <span class="tag tag-primary">Recommended</span>
+                    </label>
+
+                    <label class="label" style="display: flex; align-items: center; padding: 1rem; border: 2px solid var(--border); border-radius: 0.375rem; cursor: pointer;">
+                        <input type="radio" class="radio" name="payment" value="counter" style="margin-right: 1rem;">
+                        <div style="display: flex; align-items: center; flex: 1;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 1rem; color: var(--accent);">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            <div>
+                                <strong>Pay at Counter</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--muted);">Complete payment with our staff</p>
+                            </div>
+                        </div>
+                        <span class="tag tag-outline">Flexible</span>
+                    </label>
+                </div>
+
+                <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Continue with Selected Payment</button>
+            </div>
+        </section>
+
+        <!-- Payment Type -->
+        <section class="section">
+            <h2>Payment Type</h2>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div class="card" style="border: 3px solid var(--primary); cursor: pointer; transition: all 0.3s; position: relative;" onclick="selectPaymentType('online')" id="pay-online">
+                    <div class="text-center">
+                        <div class="icon-box" style="margin: 0 auto 1.5rem; width: 5rem; height: 5rem;">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect width="20" height="14" x="2" y="5" rx="2"/>
+                                <line x1="2" x2="22" y1="10" y2="10"/>
+                                <path d="M6 14h2"/>
+                                <path d="M10 14h6"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Pay Now (Online)</h3>
+                        <div style="margin-bottom: 1.5rem;">
+                            <span class="tag tag-primary" style="font-size: 1rem; padding: 0.75rem 1.5rem;">Instant</span>
+                        </div>
+                        <div style="text-align: left; margin-bottom: 2rem;">
+                            <p style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3" style="margin-right: 0.5rem;">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                Contactless payment
+                            </p>
+                            <p style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3" style="margin-right: 0.5rem;">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                Immediate confirmation
+                            </p>
+                            <p style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3" style="margin-right: 0.5rem;">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                Skip the queue
+                            </p>
+                            <p style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3" style="margin-right: 0.5rem;">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                Digital receipt
+                            </p>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; font-size: 1.25rem; padding: 1.25rem;">Pay Now</button>
+                    </div>
+                </div>
+
+                <div class="card" style="border: 3px solid var(--accent); cursor: pointer; transition: all 0.3s; position: relative;" onclick="selectPaymentType('counter')" id="pay-counter">
+                    <div class="text-center">
+                        <div class="icon-box" style="margin: 0 auto 1.5rem; width: 5rem; height: 5rem; background: var(--accent); color: var(--accent-foreground);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                                <path d="M16 11v6"/>
+                                <path d="M8 11v6"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Pay at Counter</h3>
+                        <div style="margin-bottom: 1.5rem;">
+                            <span class="tag tag-accent" style="font-size: 1rem; padding: 0.75rem 1.5rem;">Flexible</span>
+                        </div>
+                        <div style="text-align: left; margin-bottom: 2rem;">
+                            <p style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" style="margin-right: 0.5rem;">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                Cash or card accepted
+                            </p>
+                            <p style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" style="margin-right: 0.5rem;">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                Personal assistance
+                            </p>
+                            <p style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" style="margin-right: 0.5rem;">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                Order modifications
+                            </p>
+                            <p style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" style="margin-right: 0.5rem;">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                Special requests
+                            </p>
+                        </div>
+                        <button class="btn btn-accent" style="width: 100%; font-size: 1.25rem; padding: 1.25rem;">Order & Pay Later</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Fields -->
+        <section class="section">
+            <h2>Form Fields</h2>
+            <div class="card">
+                <div class="form-group">
+                    <label class="label">Email Address</label>
+                    <input type="email" class="input" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label class="label">
+                        <input type="checkbox" class="checkbox"> I agree to the terms
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="label">
+                        <input type="radio" class="radio" name="option"> Option 1
+                    </label>
+                    <label class="label">
+                        <input type="radio" class="radio" name="option"> Option 2
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shopping Icons -->
+        <section class="section">
+            <h2>Shopping Icons</h2>
+            <div class="card">
+                <div class="icon-grid">
+                    <div class="icon-item">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="8" cy="21" r="1"/>
+                                <circle cx="19" cy="21" r="1"/>
+                                <path d="m2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                            </svg>
+                        </div>
+                        <span>Cart</span>
+                    </div>
+                    <div class="icon-item">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/>
+                            </svg>
+                        </div>
+                        <span>Wishlist</span>
+                    </div>
+                    <div class="icon-item">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="m21 21-4.35-4.35"/>
+                            </svg>
+                        </div>
+                        <span>Search</span>
+                    </div>
+                    <div class="icon-item">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <span>Account</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pagination -->
+        <section class="section">
+            <h2>Pagination</h2>
+            <div class="card">
+                <div class="pagination">
+                    <button class="page-btn">‹</button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">›</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        function selectPayment(type) {
+            // Remove active state from all cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.transform = 'none';
+                card.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+            });
+            
+            // Add active state to selected card
+            event.currentTarget.style.transform = 'scale(1.02)';
+            event.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            
+            // Update radio button
+            const radio = document.querySelector(`input[value="${type}"]`);
+            if (radio) radio.checked = true;
+        }
+
+        // Added new function for payment type selection
+        function selectPaymentType(type) {
+            // Remove active state from payment type cards
+            document.getElementById('pay-online').style.transform = 'none';
+            document.getElementById('pay-online').style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+            document.getElementById('pay-counter').style.transform = 'none';
+            document.getElementById('pay-counter').style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+            
+            // Add active state to selected payment type card
+            const selectedCard = type === 'online' ? document.getElementById('pay-online') : document.getElementById('pay-counter');
+            selectedCard.style.transform = 'scale(1.05)';
+            selectedCard.style.boxShadow = '0 8px 25px rgba(0,0,0,0.2)';
+        }
+    </script>
+</body>
+</html>
