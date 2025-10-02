@@ -33,6 +33,7 @@ import {
   Cherry,
   Beef,
   Milk,
+  Trash2,
 } from "lucide-react";
 
 export default function KioskStyleGuide() {
@@ -1905,6 +1906,365 @@ export default function KioskStyleGuide() {
                           Unavailable
                         </Badge>
                       </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Checkout Summary */}
+      <section className="space-y-6">
+        <h2 className="text-4xl font-black text-foreground">
+          Checkout Summary
+        </h2>
+        <Card className="p-8">
+          <CardContent className="space-y-8">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-foreground">Your Order</h3>
+              <p className="text-lg text-muted-foreground">
+                Review your items before checkout
+              </p>
+
+              {/* Order Items */}
+              <div className="space-y-6 max-w-3xl mx-auto">
+                {/* Item 1: Burger with customizations */}
+                <Card className="border-2 border-border">
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between space-x-4">
+                      {/* Item Details */}
+                      <div className="flex-1 space-y-3">
+                        <div className="flex items-center justify-between">
+                          <h4 className="text-xl font-bold text-foreground">
+                            Classic Burger
+                          </h4>
+                          <span className="text-xl font-bold text-foreground">
+                            $12.99
+                          </span>
+                        </div>
+
+                        {/* Customizations */}
+                        <div className="space-y-2 pl-4 border-l-2 border-accent/30">
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="text-muted-foreground">
+                              + Extra Bacon
+                            </span>
+                            <span className="text-accent font-semibold">
+                              +$2.50
+                            </span>
+                          </div>
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="text-muted-foreground">
+                              + Avocado
+                            </span>
+                            <span className="text-accent font-semibold">
+                              +$1.50
+                            </span>
+                          </div>
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="text-muted-foreground">
+                              - No Pickles
+                            </span>
+                            <span className="text-muted-foreground">$0.00</span>
+                          </div>
+                        </div>
+
+                        {/* Item Total */}
+                        <div className="flex items-center justify-between pt-2 border-t border-border">
+                          <span className="text-lg font-semibold text-foreground">
+                            Item Total:
+                          </span>
+                          <span className="text-lg font-bold text-primary">
+                            $16.99
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Quantity Controls */}
+                      <div className="flex items-center space-x-3">
+                        <Button
+                          variant="outline"
+                          size="lg"
+                          className="h-12 w-12 rounded-lg border-2 bg-transparent"
+                        >
+                          <Minus className="h-6 w-6" />
+                        </Button>
+                        <span className="text-2xl font-bold text-foreground min-w-12 text-center">
+                          2
+                        </span>
+                        <Button size="lg" className="h-12 w-12 rounded-lg">
+                          <Plus className="h-6 w-6" />
+                        </Button>
+                      </div>
+
+                      {/* Delete Button */}
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="h-12 w-12 rounded-lg border-2 border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground bg-transparent"
+                      >
+                        <Trash2 className="h-6 w-6" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Item 2: Simple item without customizations */}
+                <Card className="border-2 border-border">
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between space-x-4">
+                      {/* Item Details */}
+                      <div className="flex-1 space-y-3">
+                        <div className="flex items-center justify-between">
+                          <h4 className="text-xl font-bold text-foreground">
+                            French Fries
+                          </h4>
+                          <span className="text-xl font-bold text-foreground">
+                            $4.99
+                          </span>
+                        </div>
+
+                        <div className="text-sm text-muted-foreground">
+                          No customizations
+                        </div>
+
+                        {/* Item Total */}
+                        <div className="flex items-center justify-between pt-2 border-t border-border">
+                          <span className="text-lg font-semibold text-foreground">
+                            Item Total:
+                          </span>
+                          <span className="text-lg font-bold text-primary">
+                            $4.99
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Quantity Controls */}
+                      <div className="flex items-center space-x-3">
+                        <Button
+                          variant="outline"
+                          size="lg"
+                          className="h-12 w-12 rounded-lg border-2 bg-transparent"
+                        >
+                          <Minus className="h-6 w-6" />
+                        </Button>
+                        <span className="text-2xl font-bold text-foreground min-w-12 text-center">
+                          1
+                        </span>
+                        <Button size="lg" className="h-12 w-12 rounded-lg">
+                          <Plus className="h-6 w-6" />
+                        </Button>
+                      </div>
+
+                      {/* Delete Button */}
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="h-12 w-12 rounded-lg border-2 border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground bg-transparent"
+                      >
+                        <Trash2 className="h-6 w-6" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Item 3: Drink with customization */}
+                <Card className="border-2 border-border">
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between space-x-4">
+                      {/* Item Details */}
+                      <div className="flex-1 space-y-3">
+                        <div className="flex items-center justify-between">
+                          <h4 className="text-xl font-bold text-foreground">
+                            Large Coke
+                          </h4>
+                          <span className="text-xl font-bold text-foreground">
+                            $3.49
+                          </span>
+                        </div>
+
+                        {/* Customizations */}
+                        <div className="space-y-2 pl-4 border-l-2 border-accent/30">
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="text-muted-foreground">
+                              Extra Ice
+                            </span>
+                            <span className="text-muted-foreground">$0.00</span>
+                          </div>
+                        </div>
+
+                        {/* Item Total */}
+                        <div className="flex items-center justify-between pt-2 border-t border-border">
+                          <span className="text-lg font-semibold text-foreground">
+                            Item Total:
+                          </span>
+                          <span className="text-lg font-bold text-primary">
+                            $3.49
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Quantity Controls */}
+                      <div className="flex items-center space-x-3">
+                        <Button
+                          variant="outline"
+                          size="lg"
+                          className="h-12 w-12 rounded-lg border-2 bg-transparent"
+                        >
+                          <Minus className="h-6 w-6" />
+                        </Button>
+                        <span className="text-2xl font-bold text-foreground min-w-12 text-center">
+                          1
+                        </span>
+                        <Button size="lg" className="h-12 w-12 rounded-lg">
+                          <Plus className="h-6 w-6" />
+                        </Button>
+                      </div>
+
+                      {/* Delete Button */}
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="h-12 w-12 rounded-lg border-2 border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground bg-transparent"
+                      >
+                        <Trash2 className="h-6 w-6" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Order Summary */}
+              <Card className="bg-secondary/50 border-2 border-primary/20 max-w-3xl mx-auto">
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-2xl font-bold text-foreground">
+                    Order Summary
+                  </h3>
+
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-lg">
+                      <span className="text-foreground">
+                        Classic Burger × 2
+                      </span>
+                      <span className="text-foreground">$33.98</span>
+                    </div>
+                    <div className="flex items-center justify-between text-lg">
+                      <span className="text-foreground">French Fries × 1</span>
+                      <span className="text-foreground">$4.99</span>
+                    </div>
+                    <div className="flex items-center justify-between text-lg">
+                      <span className="text-foreground">Large Coke × 1</span>
+                      <span className="text-foreground">$3.49</span>
+                    </div>
+
+                    <div className="border-t-2 border-border pt-3">
+                      <div className="flex items-center justify-between text-lg">
+                        <span className="text-foreground">Subtotal</span>
+                        <span className="text-foreground">$42.46</span>
+                      </div>
+                      <div className="flex items-center justify-between text-lg">
+                        <span className="text-foreground">Tax (8.5%)</span>
+                        <span className="text-foreground">$3.61</span>
+                      </div>
+                    </div>
+
+                    <div className="border-t-2 border-primary pt-3">
+                      <div className="flex items-center justify-between text-2xl font-bold">
+                        <span className="text-foreground">Total</span>
+                        <span className="text-primary">$46.07</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Checkout Button */}
+                  <Button className="w-full text-xl py-6 h-auto mt-6">
+                    <CreditCard className="mr-3 h-6 w-6" />
+                    Proceed to Checkout - $46.07
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Compact Mobile Version */}
+              <div className="space-y-4 pt-8 border-t border-border">
+                <h3 className="text-2xl font-bold text-foreground">
+                  Compact Mobile Version
+                </h3>
+                <p className="text-lg text-muted-foreground">
+                  Optimized layout for smaller screens
+                </p>
+
+                <div className="space-y-4 max-w-md mx-auto">
+                  {/* Compact Item */}
+                  <Card className="border-2 border-border">
+                    <CardContent className="p-4">
+                      <div className="space-y-3">
+                        {/* Item Header */}
+                        <div className="flex items-center justify-between">
+                          <h4 className="text-lg font-bold text-foreground">
+                            Classic Burger
+                          </h4>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="h-8 w-8 rounded border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground bg-transparent"
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
+                        </div>
+
+                        {/* Customizations */}
+                        <div className="text-sm text-muted-foreground">
+                          + Extra Bacon (+$2.50), + Avocado (+$1.50), - No
+                          Pickles
+                        </div>
+
+                        {/* Price and Quantity */}
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-2">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="h-8 w-8 rounded bg-transparent"
+                            >
+                              <Minus className="h-4 w-4" />
+                            </Button>
+                            <span className="text-lg font-bold text-foreground min-w-8 text-center">
+                              2
+                            </span>
+                            <Button size="sm" className="h-8 w-8 rounded">
+                              <Plus className="h-4 w-4" />
+                            </Button>
+                          </div>
+                          <span className="text-lg font-bold text-primary">
+                            $33.98
+                          </span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Compact Summary */}
+                  <Card className="bg-secondary/50 border-2 border-primary/20">
+                    <CardContent className="p-4 space-y-3">
+                      <div className="flex items-center justify-between text-lg">
+                        <span className="text-foreground">Subtotal</span>
+                        <span className="text-foreground">$42.46</span>
+                      </div>
+                      <div className="flex items-center justify-between text-lg">
+                        <span className="text-foreground">Tax</span>
+                        <span className="text-foreground">$3.61</span>
+                      </div>
+                      <div className="border-t border-border pt-3">
+                        <div className="flex items-center justify-between text-xl font-bold">
+                          <span className="text-foreground">Total</span>
+                          <span className="text-primary">$46.07</span>
+                        </div>
+                      </div>
+                      <Button className="w-full text-lg py-4 h-auto mt-3">
+                        Checkout - $46.07
+                      </Button>
                     </CardContent>
                   </Card>
                 </div>
