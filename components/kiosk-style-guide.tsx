@@ -34,6 +34,7 @@ import {
   Beef,
   Milk,
   Trash2,
+  X,
 } from "lucide-react";
 
 export default function KioskStyleGuide() {
@@ -2265,6 +2266,320 @@ export default function KioskStyleGuide() {
                       <Button className="w-full text-lg py-4 h-auto mt-3">
                         Checkout - £46.07
                       </Button>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Prompt Modal */}
+      <section className="space-y-6">
+        <h2 className="text-4xl font-black text-foreground">Prompt Modal</h2>
+        <Card className="p-8">
+          <CardContent className="space-y-8">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-foreground">
+                Confirmation Dialogs
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Modal dialogs for critical user confirmations
+              </p>
+
+              {/* Modal Example 1: Cancel Order */}
+              <div className="space-y-4">
+                <h4 className="text-xl font-bold text-foreground">
+                  Cancel Order Confirmation
+                </h4>
+
+                {/* Modal Overlay and Content */}
+                <div className="relative max-w-2xl mx-auto">
+                  {/* Backdrop representation */}
+                  <div className="bg-black/50 rounded-lg p-8">
+                    <Card className="border-2 border-border shadow-2xl">
+                      <CardContent className="p-8 relative">
+                        {/* Close Button */}
+                        <Button
+                          variant="outline"
+                          size="lg"
+                          className="absolute top-4 right-4 h-12 w-12 rounded-lg border-2 bg-transparent"
+                        >
+                          <X className="h-6 w-6" />
+                        </Button>
+
+                        {/* Modal Content */}
+                        <div className="space-y-6">
+                          {/* Icon */}
+                          <div className="flex justify-center">
+                            <div className="h-20 w-20 bg-destructive/20 rounded-full flex items-center justify-center">
+                              <AlertCircle className="h-12 w-12 text-destructive" />
+                            </div>
+                          </div>
+
+                          {/* Title */}
+                          <div className="text-center">
+                            <h3 className="text-3xl font-bold text-foreground">
+                              Cancel Order?
+                            </h3>
+                          </div>
+
+                          {/* Message */}
+                          <div className="text-center space-y-2">
+                            <p className="text-xl text-foreground">
+                              Are you sure you want to cancel your order?
+                            </p>
+                            <p className="text-lg text-muted-foreground">
+                              All items will be removed and you'll need to start
+                              over.
+                            </p>
+                          </div>
+
+                          {/* Action Buttons */}
+                          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                            <Button
+                              variant="outline"
+                              size="lg"
+                              className="flex-1 text-xl py-6 h-auto border-2 bg-transparent"
+                            >
+                              No, Keep Order
+                            </Button>
+                            <Button
+                              size="lg"
+                              className="flex-1 text-xl py-6 h-auto bg-destructive hover:bg-destructive/90 text-destructive-foreground"
+                            >
+                              Yes, Cancel Order
+                            </Button>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+
+              {/* Modal Example 2: Delete Item */}
+              <div className="space-y-4 pt-8 border-t border-border">
+                <h4 className="text-xl font-bold text-foreground">
+                  Delete Item Confirmation
+                </h4>
+
+                <div className="relative max-w-2xl mx-auto">
+                  <div className="bg-black/50 rounded-lg p-8">
+                    <Card className="border-2 border-border shadow-2xl">
+                      <CardContent className="p-8 relative">
+                        {/* Close Button */}
+                        <Button
+                          variant="outline"
+                          size="lg"
+                          className="absolute top-4 right-4 h-12 w-12 rounded-lg border-2 bg-transparent"
+                        >
+                          <X className="h-6 w-6" />
+                        </Button>
+
+                        {/* Modal Content */}
+                        <div className="space-y-6">
+                          {/* Icon */}
+                          <div className="flex justify-center">
+                            <div className="h-20 w-20 bg-accent/20 rounded-full flex items-center justify-center">
+                              <Trash2 className="h-12 w-12 text-accent" />
+                            </div>
+                          </div>
+
+                          {/* Title */}
+                          <div className="text-center">
+                            <h3 className="text-3xl font-bold text-foreground">
+                              Remove Item?
+                            </h3>
+                          </div>
+
+                          {/* Message */}
+                          <div className="text-center space-y-2">
+                            <p className="text-xl text-foreground">
+                              Remove "Classic Burger" from your order?
+                            </p>
+                            <p className="text-lg text-muted-foreground">
+                              This action cannot be undone.
+                            </p>
+                          </div>
+
+                          {/* Action Buttons */}
+                          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                            <Button
+                              variant="outline"
+                              size="lg"
+                              className="flex-1 text-xl py-6 h-auto border-2 bg-transparent"
+                            >
+                              No, Keep Item
+                            </Button>
+                            <Button
+                              size="lg"
+                              className="flex-1 text-xl py-6 h-auto bg-accent hover:bg-accent/90 text-accent-foreground"
+                            >
+                              Yes, Remove Item
+                            </Button>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+
+              {/* Modal Example 3: Payment Timeout */}
+              <div className="space-y-4 pt-8 border-t border-border">
+                <h4 className="text-xl font-bold text-foreground">
+                  Session Timeout Warning
+                </h4>
+
+                <div className="relative max-w-2xl mx-auto">
+                  <div className="bg-black/50 rounded-lg p-8">
+                    <Card className="border-2 border-border shadow-2xl">
+                      <CardContent className="p-8 relative">
+                        {/* Modal Content */}
+                        <div className="space-y-6">
+                          {/* Icon */}
+                          <div className="flex justify-center">
+                            <div className="h-20 w-20 bg-primary/20 rounded-full flex items-center justify-center">
+                              <AlertCircle className="h-12 w-12 text-primary" />
+                            </div>
+                          </div>
+
+                          {/* Title */}
+                          <div className="text-center">
+                            <h3 className="text-3xl font-bold text-foreground">
+                              Session Expiring
+                            </h3>
+                          </div>
+
+                          {/* Message */}
+                          <div className="text-center space-y-2">
+                            <p className="text-xl text-foreground">
+                              Your session will expire in 60 seconds.
+                            </p>
+                            <p className="text-lg text-muted-foreground">
+                              Would you like to continue with your order?
+                            </p>
+                          </div>
+
+                          {/* Action Buttons */}
+                          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                            <Button
+                              variant="outline"
+                              size="lg"
+                              className="flex-1 text-xl py-6 h-auto border-2 bg-transparent"
+                            >
+                              End Session
+                            </Button>
+                            <Button
+                              size="lg"
+                              className="flex-1 text-xl py-6 h-auto"
+                            >
+                              Continue Order
+                            </Button>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+
+              {/* Compact Mobile Modals */}
+              <div className="space-y-4 pt-8 border-t border-border">
+                <h4 className="text-xl font-bold text-foreground">
+                  Compact Mobile Version
+                </h4>
+                <p className="text-lg text-muted-foreground">
+                  Optimized for smaller screens
+                </p>
+
+                <div className="relative max-w-md mx-auto">
+                  <div className="bg-black/50 rounded-lg p-4">
+                    <Card className="border-2 border-border shadow-2xl">
+                      <CardContent className="p-6">
+                        <div className="space-y-4">
+                          {/* Icon */}
+                          <div className="flex justify-center">
+                            <div className="h-16 w-16 bg-destructive/20 rounded-full flex items-center justify-center">
+                              <AlertCircle className="h-10 w-10 text-destructive" />
+                            </div>
+                          </div>
+
+                          {/* Title and Message */}
+                          <div className="text-center space-y-2">
+                            <h3 className="text-2xl font-bold text-foreground">
+                              Cancel Order?
+                            </h3>
+                            <p className="text-lg text-muted-foreground">
+                              All items will be removed.
+                            </p>
+                          </div>
+
+                          {/* Stacked Buttons for Mobile */}
+                          <div className="space-y-3 pt-2">
+                            <Button
+                              variant="outline"
+                              className="w-full text-lg py-4 h-auto border-2 bg-transparent"
+                            >
+                              No, Keep Order
+                            </Button>
+                            <Button className="w-full text-lg py-4 h-auto bg-destructive hover:bg-destructive/90 text-destructive-foreground">
+                              Yes, Cancel Order
+                            </Button>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+
+              {/* Modal Design Guidelines */}
+              <div className="space-y-4 pt-8 border-t border-border">
+                <h4 className="text-xl font-bold text-foreground">
+                  Design Guidelines
+                </h4>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Card className="bg-primary/5 border-primary/20">
+                    <CardContent className="p-6 space-y-3">
+                      <h5 className="text-lg font-bold text-primary">
+                        Visual Hierarchy
+                      </h5>
+                      <p className="text-foreground">
+                        • Large, clear icons for immediate recognition
+                      </p>
+                      <p className="text-foreground">
+                        • Bold titles with descriptive messages
+                      </p>
+                      <p className="text-foreground">
+                        • Primary action uses accent/destructive colors
+                      </p>
+                      <p className="text-foreground">
+                        • Secondary action uses outline styling
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-accent/5 border-accent/20">
+                    <CardContent className="p-6 space-y-3">
+                      <h5 className="text-lg font-bold text-accent">
+                        Touch Optimization
+                      </h5>
+                      <p className="text-foreground">
+                        • Large buttons (minimum 60px height)
+                      </p>
+                      <p className="text-foreground">
+                        • Generous spacing between actions
+                      </p>
+                      <p className="text-foreground">
+                        • Clear close button in top-right
+                      </p>
+                      <p className="text-foreground">
+                        • Backdrop prevents accidental taps
+                      </p>
                     </CardContent>
                   </Card>
                 </div>
