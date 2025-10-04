@@ -35,6 +35,7 @@ import {
   Milk,
   Trash2,
   X,
+  Delete,
 } from "lucide-react";
 
 export default function KioskStyleGuide() {
@@ -2579,6 +2580,506 @@ export default function KioskStyleGuide() {
                       </p>
                       <p className="text-foreground">
                         • Backdrop prevents accidental taps
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Numeric Keypad */}
+      <section className="space-y-6">
+        <h2 className="text-4xl font-black text-foreground">Numeric Keypad</h2>
+        <Card className="p-8">
+          <CardContent className="space-y-8">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-foreground">
+                Number Input Interface
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Touch-optimized keypad for numeric input with display area
+              </p>
+
+              {/* Full Keypad with Display */}
+              <div className="space-y-6 max-w-md mx-auto">
+                <h4 className="text-xl font-bold text-foreground text-center">
+                  Complete Keypad
+                </h4>
+
+                {/* Display Area */}
+                <Card className="bg-secondary/50 border-2 border-primary/20">
+                  <CardContent className="p-6">
+                    <div className="text-right">
+                      <div className="text-4xl font-bold text-foreground font-mono min-h-12 flex items-center justify-end">
+                        1234.56
+                      </div>
+                      <div className="text-sm text-muted-foreground mt-2">
+                        Enter amount
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Keypad Grid */}
+                <div className="grid grid-cols-3 gap-4">
+                  {/* Row 1: 7, 8, 9 */}
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    7
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    8
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    9
+                  </Button>
+
+                  {/* Row 2: 4, 5, 6 */}
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    4
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    5
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    6
+                  </Button>
+
+                  {/* Row 3: 1, 2, 3 */}
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    1
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    2
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    3
+                  </Button>
+
+                  {/* Row 4: CE, 0, Delete */}
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-20 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                  >
+                    CE
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    0
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-20 border-2 border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground bg-transparent"
+                  >
+                    <Delete className="h-8 w-8" />
+                  </Button>
+                </div>
+              </div>
+
+              {/* Alternative Layout: With Decimal Point */}
+              <div className="space-y-6 max-w-md mx-auto pt-8 border-t border-border">
+                <h4 className="text-xl font-bold text-foreground text-center">
+                  With Decimal Point
+                </h4>
+
+                {/* Display Area */}
+                <Card className="bg-secondary/50 border-2 border-primary/20">
+                  <CardContent className="p-6">
+                    <div className="text-right">
+                      <div className="text-4xl font-bold text-foreground font-mono min-h-12 flex items-center justify-end">
+                        £25.99
+                      </div>
+                      <div className="text-sm text-muted-foreground mt-2">
+                        Payment amount
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Keypad Grid with Decimal */}
+                <div className="grid grid-cols-3 gap-4">
+                  {/* Row 1: 7, 8, 9 */}
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    7
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    8
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    9
+                  </Button>
+
+                  {/* Row 2: 4, 5, 6 */}
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    4
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    5
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    6
+                  </Button>
+
+                  {/* Row 3: 1, 2, 3 */}
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    1
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    2
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    3
+                  </Button>
+
+                  {/* Row 4: ., 0, Delete */}
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20 border-2 bg-transparent"
+                  >
+                    .
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    0
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-20 border-2 border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground bg-transparent"
+                  >
+                    <Delete className="h-8 w-8" />
+                  </Button>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="grid grid-cols-2 gap-4 pt-4">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="text-xl py-4 h-auto border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                  >
+                    Clear All
+                  </Button>
+                  <Button size="lg" className="text-xl py-4 h-auto">
+                    Confirm
+                  </Button>
+                </div>
+              </div>
+
+              {/* Compact Mobile Version */}
+              <div className="space-y-6 max-w-xs mx-auto pt-8 border-t border-border">
+                <h4 className="text-xl font-bold text-foreground text-center">
+                  Compact Mobile
+                </h4>
+
+                {/* Compact Display */}
+                <Card className="bg-secondary/50 border-2 border-primary/20">
+                  <CardContent className="p-4">
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-foreground font-mono min-h-8 flex items-center justify-end">
+                        123.45
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Compact Keypad */}
+                <div className="grid grid-cols-3 gap-3">
+                  {/* Numbers 1-9 */}
+                  <Button
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-16"
+                  >
+                    1
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-16"
+                  >
+                    2
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-16"
+                  >
+                    3
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-16"
+                  >
+                    4
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-16"
+                  >
+                    5
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-16"
+                  >
+                    6
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-16"
+                  >
+                    7
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-16"
+                  >
+                    8
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-16"
+                  >
+                    9
+                  </Button>
+
+                  {/* Bottom row */}
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="aspect-square text-lg font-bold w-full h-16 border-accent text-accent bg-transparent"
+                  >
+                    CE
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-16"
+                  >
+                    0
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="aspect-square w-full h-16 border-destructive text-destructive bg-transparent"
+                  >
+                    <Delete className="h-6 w-6" />
+                  </Button>
+                </div>
+              </div>
+
+              {/* PIN Entry Version */}
+              <div className="space-y-6 max-w-md mx-auto pt-8 border-t border-border">
+                <h4 className="text-xl font-bold text-foreground text-center">
+                  PIN Entry
+                </h4>
+
+                {/* PIN Display with Hidden Characters */}
+                <Card className="bg-secondary/50 border-2 border-primary/20">
+                  <CardContent className="p-6">
+                    <div className="text-center">
+                      <div className="text-4xl font-bold text-foreground font-mono min-h-12 flex items-center justify-center space-x-2">
+                        <span className="h-4 w-4 bg-primary rounded-full"></span>
+                        <span className="h-4 w-4 bg-primary rounded-full"></span>
+                        <span className="h-4 w-4 bg-primary rounded-full"></span>
+                        <span className="h-4 w-4 bg-muted rounded-full"></span>
+                      </div>
+                      <div className="text-sm text-muted-foreground mt-2">
+                        Enter 4-digit PIN
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* PIN Keypad */}
+                <div className="grid grid-cols-3 gap-4">
+                  {/* Row 1: 1, 2, 3 */}
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    1
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    2
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    3
+                  </Button>
+
+                  {/* Row 2: 4, 5, 6 */}
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    4
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    5
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    6
+                  </Button>
+
+                  {/* Row 3: 7, 8, 9 */}
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    7
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    8
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    9
+                  </Button>
+
+                  {/* Row 4: Clear, 0, Delete */}
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="aspect-square text-lg font-bold w-full h-20 border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                  >
+                    Clear
+                  </Button>
+                  <Button
+                    size="lg"
+                    className="aspect-square text-3xl font-bold w-full h-20"
+                  >
+                    0
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="aspect-square text-xl font-bold w-full h-20 border-2 border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground bg-transparent"
+                  >
+                    <Delete className="h-8 w-8" />
+                  </Button>
+                </div>
+              </div>
+
+              {/* Design Guidelines */}
+              <div className="space-y-4 pt-8 border-t border-border">
+                <h4 className="text-xl font-bold text-foreground">
+                  Keypad Guidelines
+                </h4>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Card className="bg-primary/5 border-primary/20">
+                    <CardContent className="p-6 space-y-3">
+                      <h5 className="text-lg font-bold text-primary">
+                        Button Layout
+                      </h5>
+                      <p className="text-foreground">
+                        • Standard phone keypad layout (1-2-3 at top)
+                      </p>
+                      <p className="text-foreground">
+                        • Large 80px touch targets for accessibility
+                      </p>
+                      <p className="text-foreground">
+                        • 16px gaps between buttons for precision
+                      </p>
+                      <p className="text-foreground">
+                        • Square aspect ratio for consistent sizing
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-accent/5 border-accent/20">
+                    <CardContent className="p-6 space-y-3">
+                      <h5 className="text-lg font-bold text-accent">
+                        Function Buttons
+                      </h5>
+                      <p className="text-foreground">
+                        • CE (Clear Entry) in accent color
+                      </p>
+                      <p className="text-foreground">
+                        • Delete button in destructive color
+                      </p>
+                      <p className="text-foreground">
+                        • Decimal point as outline button
+                      </p>
+                      <p className="text-foreground">
+                        • Visual feedback on all interactions
                       </p>
                     </CardContent>
                   </Card>
