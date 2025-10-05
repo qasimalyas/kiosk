@@ -3137,6 +3137,117 @@ export default function KioskStyleGuide() {
           </Card>
         </div>
       </section>
+
+      {/* Language Selection */}
+      <section className="space-y-6">
+        <h2 className="text-4xl font-black text-foreground">
+          Language Selection
+        </h2>
+        <p className="text-muted-foreground text-lg max-w-4xl">
+          Large, accessible language selection cards with flag representations
+          for easy identification.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* English */}
+          <Card className="cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg border-2 hover:border-primary h-48">
+            <CardContent className="p-6 h-full flex flex-col items-center justify-center text-center space-y-4">
+              {/* UK Flag emoji */}
+              <div className="text-6xl">🇬🇧</div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground">English</h3>
+                <p className="text-muted-foreground">English</p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Polish */}
+          <Card className="cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg border-2 hover:border-primary h-48">
+            <CardContent className="p-6 h-full flex flex-col items-center justify-center text-center space-y-4">
+              {/* Polish Flag emoji */}
+              <div className="text-6xl">🇵🇱</div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground">Polski</h3>
+                <p className="text-muted-foreground">Polish</p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Urdu (Pakistan) */}
+          <Card className="cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-lg border-2 hover:border-primary h-48">
+            <CardContent className="p-6 h-full flex flex-col items-center justify-center text-center space-y-4">
+              {/* Pakistan Flag emoji */}
+              <div className="text-6xl">🇵🇰</div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground">اردو</h3>
+                <p className="text-muted-foreground">Urdu</p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Selected State Example */}
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold text-foreground">Selected State</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card className="cursor-pointer border-2 border-primary bg-primary/10 h-48">
+              <CardContent className="p-6 h-full flex flex-col items-center justify-center text-center space-y-4">
+                {/* UK Flag emoji */}
+                <div className="text-6xl">🇬🇧</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-primary">English</h3>
+                  <p className="text-primary/70">English</p>
+                </div>
+                {/* Selected indicator */}
+                <div className="absolute top-2 right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                  <svg
+                    className="w-4 h-4 text-primary-foreground"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Design Guidelines */}
+        <Card className="bg-muted/50">
+          <CardContent className="p-6">
+            <h3 className="text-xl font-bold text-foreground mb-4">
+              Design Guidelines
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-foreground mb-2">Layout</h4>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>• Large 192px height cards for easy touch</li>
+                  <li>• 3-column grid on desktop, single column mobile</li>
+                  <li>• Generous spacing between options</li>
+                  <li>• Flag prominently displayed at top</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground mb-2">
+                  Interaction
+                </h4>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>• Hover scale effect for feedback</li>
+                  <li>• Selected state with primary border and background</li>
+                  <li>• Check mark indicator for selected language</li>
+                  <li>• Native script display for language names</li>
+                </ul>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
     </div>
   );
 }
