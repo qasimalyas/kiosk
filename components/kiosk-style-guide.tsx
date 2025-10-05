@@ -3248,6 +3248,219 @@ export default function KioskStyleGuide() {
           </CardContent>
         </Card>
       </section>
+
+      {/* Payment Processing Screen */}
+      <section className="space-y-6">
+        <h2 className="text-4xl font-black text-foreground">
+          Payment Processing
+        </h2>
+        <p className="text-muted-foreground text-lg max-w-4xl">
+          Full-screen payment processing interface with clear status indication
+          and amount confirmation.
+        </p>
+
+        {/* Processing State */}
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold text-foreground">
+            Processing Payment
+          </h3>
+          <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20 min-h-[500px]">
+            <CardContent className="p-12 h-full flex flex-col items-center justify-center text-center space-y-8">
+              {/* Spinner */}
+              <div className="relative">
+                <div className="w-24 h-24 border-8 border-primary/20 border-t-primary rounded-full animate-spin"></div>
+                {/* Inner spinning element for more visual interest */}
+                <div
+                  className="absolute inset-4 w-16 h-16 border-4 border-primary/30 border-b-primary rounded-full animate-spin"
+                  style={{
+                    animationDirection: "reverse",
+                    animationDuration: "0.8s",
+                  }}
+                ></div>
+              </div>
+
+              {/* Status Text */}
+              <div className="space-y-4">
+                <h3 className="text-4xl font-bold text-foreground">
+                  Processing Payment
+                </h3>
+                <p className="text-xl text-muted-foreground max-w-md">
+                  Please wait while we process your payment. Do not remove your
+                  card or leave the kiosk.
+                </p>
+              </div>
+
+              {/* Payment Amount */}
+              <div className="bg-white/50 dark:bg-gray-900/50 rounded-2xl p-6 border-2 border-primary/20">
+                <p className="text-lg text-muted-foreground mb-2">
+                  Total Amount
+                </p>
+                <p className="text-5xl font-black text-primary">£24.99</p>
+              </div>
+
+              {/* Progress dots */}
+              <div className="flex space-x-2">
+                <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                <div
+                  className="w-3 h-3 bg-primary/60 rounded-full animate-pulse"
+                  style={{ animationDelay: "0.2s" }}
+                ></div>
+                <div
+                  className="w-3 h-3 bg-primary/30 rounded-full animate-pulse"
+                  style={{ animationDelay: "0.4s" }}
+                ></div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Success State */}
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold text-foreground">
+            Payment Successful
+          </h3>
+          <Card className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 border-green-200 dark:border-green-800 min-h-[500px]">
+            <CardContent className="p-12 h-full flex flex-col items-center justify-center text-center space-y-8">
+              {/* Success Icon */}
+              <div className="w-24 h-24 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-12 h-12 text-green-600 dark:text-green-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={3}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+
+              {/* Success Text */}
+              <div className="space-y-4">
+                <h3 className="text-4xl font-bold text-green-700 dark:text-green-400">
+                  Payment Successful!
+                </h3>
+                <p className="text-xl text-green-600 dark:text-green-300 max-w-md">
+                  Your payment has been processed successfully. Your order is
+                  being prepared.
+                </p>
+              </div>
+
+              {/* Payment Amount */}
+              <div className="bg-white/70 dark:bg-gray-900/50 rounded-2xl p-6 border-2 border-green-200 dark:border-green-800">
+                <p className="text-lg text-green-600 dark:text-green-400 mb-2">
+                  Amount Paid
+                </p>
+                <p className="text-5xl font-black text-green-700 dark:text-green-400">
+                  £24.99
+                </p>
+              </div>
+
+              {/* Order Number */}
+              <div className="bg-green-100 dark:bg-green-900/30 rounded-xl p-4 border border-green-200 dark:border-green-800">
+                <p className="text-sm text-green-600 dark:text-green-400 mb-1">
+                  Order Number
+                </p>
+                <p className="text-2xl font-bold text-green-700 dark:text-green-300">
+                  #12345
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Error State */}
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold text-foreground">Payment Failed</h3>
+          <Card className="bg-gradient-to-br from-red-50 to-rose-50 dark:from-red-950/20 dark:to-rose-950/20 border-red-200 dark:border-red-800 min-h-[500px]">
+            <CardContent className="p-12 h-full flex flex-col items-center justify-center text-center space-y-8">
+              {/* Error Icon */}
+              <div className="w-24 h-24 bg-red-100 dark:bg-red-900/50 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-12 h-12 text-red-600 dark:text-red-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={3}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </div>
+
+              {/* Error Text */}
+              <div className="space-y-4">
+                <h3 className="text-4xl font-bold text-red-700 dark:text-red-400">
+                  Payment Failed
+                </h3>
+                <p className="text-xl text-red-600 dark:text-red-300 max-w-md">
+                  We couldn't process your payment. Please try again or use a
+                  different payment method.
+                </p>
+              </div>
+
+              {/* Payment Amount */}
+              <div className="bg-white/70 dark:bg-gray-900/50 rounded-2xl p-6 border-2 border-red-200 dark:border-red-800">
+                <p className="text-lg text-red-600 dark:text-red-400 mb-2">
+                  Amount
+                </p>
+                <p className="text-5xl font-black text-red-700 dark:text-red-400">
+                  £24.99
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+                <Button className="flex-1 h-16 text-lg" variant="default">
+                  Try Again
+                </Button>
+                <Button className="flex-1 h-16 text-lg" variant="outline">
+                  Choose Different Payment
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Design Guidelines */}
+        <Card className="bg-muted/50">
+          <CardContent className="p-6">
+            <h3 className="text-xl font-bold text-foreground mb-4">
+              Design Guidelines
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-foreground mb-2">
+                  Processing State
+                </h4>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>• Large animated spinner for clear visual feedback</li>
+                  <li>• Prominent amount display for confirmation</li>
+                  <li>• Clear instructions to prevent interruption</li>
+                  <li>• Gradient background to indicate active state</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground mb-2">
+                  Status States
+                </h4>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>• Green theme for successful payments</li>
+                  <li>• Red theme for failed payments</li>
+                  <li>• Order number display on success</li>
+                  <li>• Action buttons for error recovery</li>
+                </ul>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
     </div>
   );
 }
