@@ -3461,6 +3461,445 @@ export default function KioskStyleGuide() {
           </CardContent>
         </Card>
       </section>
+
+      {/* Category Cards */}
+      <section className="space-y-6">
+        <h2 className="text-4xl font-black text-foreground">Category Cards</h2>
+        <p className="text-muted-foreground text-lg max-w-4xl">
+          Browse our menu categories with visual images and clear category
+          identification.
+        </p>
+
+        <div className="space-y-6">
+          <h3 className="text-2xl font-bold text-foreground">
+            Menu Categories
+          </h3>
+          <p className="text-lg text-muted-foreground">
+            Select a category to explore our delicious offerings
+          </p>
+
+          {/* Main Category Grid - 4x2 Layout */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {/* Peri Platters */}
+            <Card className="aspect-square hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-primary group">
+              <CardContent className="p-0 h-full flex flex-col">
+                {/* Image Area */}
+                <div className="flex-1 bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 rounded-t-lg flex items-center justify-center group-hover:from-orange-200 group-hover:to-red-200 dark:group-hover:from-orange-800/40 dark:group-hover:to-red-800/40 transition-all duration-300 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=300&h=300&fit=crop&crop=center"
+                    alt="Peri Platters"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                {/* Category Info */}
+                <div className="p-4 text-center">
+                  <h4 className="text-lg font-bold text-foreground">
+                    Peri Platters
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Flame-grilled perfection
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Offers */}
+            <Card className="aspect-square hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-destructive group">
+              <CardContent className="p-0 h-full flex flex-col">
+                <div className="flex-1 bg-gradient-to-br from-red-100 to-pink-100 dark:from-red-900/30 dark:to-pink-900/30 rounded-t-lg flex items-center justify-center group-hover:from-red-200 group-hover:to-pink-200 dark:group-hover:from-red-800/40 dark:group-hover:to-pink-800/40 transition-all duration-300 relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=300&h=300&fit=crop&crop=center"
+                    alt="Special Offers"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <Badge className="absolute top-2 right-2 bg-destructive text-destructive-foreground">
+                    Sale
+                  </Badge>
+                </div>
+                <div className="p-4 text-center">
+                  <h4 className="text-lg font-bold text-foreground">Offers</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Special deals & savings
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Chicken Burgers */}
+            <Card className="aspect-square hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-primary group">
+              <CardContent className="p-0 h-full flex flex-col">
+                <div className="flex-1 bg-gradient-to-br from-yellow-100 to-orange-100 dark:from-yellow-900/30 dark:to-orange-900/30 rounded-t-lg flex items-center justify-center group-hover:from-yellow-200 group-hover:to-orange-200 dark:group-hover:from-yellow-800/40 dark:group-hover:to-orange-800/40 transition-all duration-300 overflow-hidden">
+                  <img
+                    src="https://images.unsphttps://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=300&auto=format&fit=croplash.com/photo-1553979459-d2229ba7433a?w=300&h=300&fit=crop&crop=center"
+                    alt="Chicken Burgers"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h4 className="text-lg font-bold text-foreground">
+                    Chicken Burgers
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Juicy & flavorful
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Beef Burgers */}
+            <Card className="aspect-square hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-accent group">
+              <CardContent className="p-0 h-full flex flex-col">
+                <div className="flex-1 bg-gradient-to-br from-amber-100 to-red-100 dark:from-amber-900/30 dark:to-red-900/30 rounded-t-lg flex items-center justify-center group-hover:from-amber-200 group-hover:to-red-200 dark:group-hover:from-amber-800/40 dark:group-hover:to-red-800/40 transition-all duration-300 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=300&fit=crop&crop=center"
+                    alt="Beef Burgers"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h4 className="text-lg font-bold text-foreground">
+                    Beef Burgers
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Premium quality beef
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Sides */}
+            <Card className="aspect-square hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-primary group">
+              <CardContent className="p-0 h-full flex flex-col">
+                <div className="flex-1 bg-gradient-to-br from-yellow-100 to-amber-100 dark:from-yellow-900/30 dark:to-amber-900/30 rounded-t-lg flex items-center justify-center group-hover:from-yellow-200 group-hover:to-amber-200 dark:group-hover:from-yellow-800/40 dark:group-hover:to-amber-800/40 transition-all duration-300 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=300&h=300&fit=crop&crop=center"
+                    alt="Sides"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h4 className="text-lg font-bold text-foreground">Sides</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Perfect accompaniments
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Salads */}
+            <Card className="aspect-square hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-accent group">
+              <CardContent className="p-0 h-full flex flex-col">
+                <div className="flex-1 bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 rounded-t-lg flex items-center justify-center group-hover:from-green-200 group-hover:to-emerald-200 dark:group-hover:from-green-800/40 dark:group-hover:to-emerald-800/40 transition-all duration-300 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&h=300&fit=crop&crop=center"
+                    alt="Salads"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h4 className="text-lg font-bold text-foreground">Salads</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Fresh & healthy options
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Drinks */}
+            <Card className="aspect-square hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-primary group">
+              <CardContent className="p-0 h-full flex flex-col">
+                <div className="flex-1 bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 rounded-t-lg flex items-center justify-center group-hover:from-blue-200 group-hover:to-cyan-200 dark:group-hover:from-blue-800/40 dark:group-hover:to-cyan-800/40 transition-all duration-300 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=300&h=300&fit=crop&crop=center"
+                    alt="Drinks"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h4 className="text-lg font-bold text-foreground">Drinks</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Refreshing beverages
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Kids Meal */}
+            <Card className="aspect-square hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-accent group">
+              <CardContent className="p-0 h-full flex flex-col">
+                <div className="flex-1 bg-gradient-to-br from-pink-100 to-purple-100 dark:from-pink-900/30 dark:to-purple-900/30 rounded-t-lg flex items-center justify-center group-hover:from-pink-200 group-hover:to-purple-200 dark:group-hover:from-pink-800/40 dark:group-hover:to-purple-800/40 transition-all duration-300 relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=300&h=300&fit=crop&crop=center"
+                    alt="Kids Meal"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <Badge className="absolute top-2 right-2 bg-accent text-accent-foreground text-xs">
+                    Kids
+                  </Badge>
+                </div>
+                <div className="p-4 text-center">
+                  <h4 className="text-lg font-bold text-foreground">
+                    Kids Meal
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Fun meals for little ones
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Selected State Example */}
+          <div className="space-y-4 pt-8 border-t border-border">
+            <h3 className="text-2xl font-bold text-foreground">
+              Selected State
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Visual feedback when a category is selected
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {/* Selected Category Example */}
+              <Card className="aspect-square transition-all duration-300 cursor-pointer border-2 border-primary bg-primary/10 shadow-xl">
+                <CardContent className="p-0 h-full flex flex-col relative">
+                  {/* Selected indicator */}
+                  <div className="absolute top-2 right-2 z-10 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <svg
+                      className="w-5 h-5 text-primary-foreground"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <div className="flex-1 bg-gradient-to-br from-yellow-200 to-orange-200 dark:from-yellow-800/50 dark:to-orange-800/50 rounded-t-lg flex items-center justify-center overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=300&h=300&fit=crop&crop=center"
+                      alt="Chicken Burgers"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-4 text-center">
+                    <h4 className="text-lg font-bold text-primary">
+                      Chicken Burgers
+                    </h4>
+                    <p className="text-sm text-primary/70">Juicy & flavorful</p>
+                    <Badge className="bg-primary/20 text-primary text-xs px-2 py-1 mt-2">
+                      Selected
+                    </Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Other categories for context */}
+              <Card className="aspect-square hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-accent group opacity-60">
+                <CardContent className="p-0 h-full flex flex-col">
+                  <div className="flex-1 bg-gradient-to-br from-amber-100 to-red-100 dark:from-amber-900/30 dark:to-red-900/30 rounded-t-lg flex items-center justify-center group-hover:from-amber-200 group-hover:to-red-200 dark:group-hover:from-amber-800/40 dark:group-hover:to-red-800/40 transition-all duration-300 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=300&fit=crop&crop=center"
+                      alt="Beef Burgers"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 text-center">
+                    <h4 className="text-lg font-bold text-foreground">
+                      Beef Burgers
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Premium quality beef
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="aspect-square hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-primary group opacity-60">
+                <CardContent className="p-0 h-full flex flex-col">
+                  <div className="flex-1 bg-gradient-to-br from-yellow-100 to-amber-100 dark:from-yellow-900/30 dark:to-amber-900/30 rounded-t-lg flex items-center justify-center group-hover:from-yellow-200 group-hover:to-amber-200 dark:group-hover:from-yellow-800/40 dark:group-hover:to-amber-800/40 transition-all duration-300 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=300&h=300&fit=crop&crop=center"
+                      alt="Sides"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 text-center">
+                    <h4 className="text-lg font-bold text-foreground">Sides</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Perfect accompaniments
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="aspect-square hover:shadow-xl transition-all duration-300 cursor-pointer border-2 hover:border-accent group opacity-60">
+                <CardContent className="p-0 h-full flex flex-col">
+                  <div className="flex-1 bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 rounded-t-lg flex items-center justify-center group-hover:from-blue-200 group-hover:to-cyan-200 dark:group-hover:from-blue-800/40 dark:group-hover:to-cyan-800/40 transition-all duration-300 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=300&h=300&fit=crop&crop=center"
+                      alt="Drinks"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 text-center">
+                    <h4 className="text-lg font-bold text-foreground">
+                      Drinks
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Refreshing beverages
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Compact Version */}
+          <div className="space-y-4 pt-8 border-t border-border">
+            <h3 className="text-2xl font-bold text-foreground">
+              Compact Version
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Smaller cards for mobile or limited space scenarios
+            </p>
+
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-w-5xl mx-auto">
+              <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-primary group">
+                <CardContent className="p-0 h-full flex flex-col">
+                  <div className="flex-1 bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 rounded-t-lg flex items-center justify-center group-hover:from-orange-200 group-hover:to-red-200 dark:group-hover:from-orange-800/40 dark:group-hover:to-red-800/40 transition-all duration-300 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=200&h=200&fit=crop&crop=center"
+                      alt="Peri Platters"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-2 text-center">
+                    <h4 className="text-sm font-bold text-foreground">
+                      Peri Platters
+                    </h4>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-destructive group">
+                <CardContent className="p-0 h-full flex flex-col">
+                  <div className="flex-1 bg-gradient-to-br from-red-100 to-pink-100 dark:from-red-900/30 dark:to-pink-900/30 rounded-t-lg flex items-center justify-center group-hover:from-red-200 group-hover:to-pink-200 dark:group-hover:from-red-800/40 dark:group-hover:to-pink-800/40 transition-all duration-300 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200&h=200&fit=crop&crop=center"
+                      alt="Special Offers"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-2 text-center">
+                    <h4 className="text-sm font-bold text-foreground">
+                      Offers
+                    </h4>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-primary group">
+                <CardContent className="p-0 h-full flex flex-col">
+                  <div className="flex-1 bg-gradient-to-br from-yellow-100 to-orange-100 dark:from-yellow-900/30 dark:to-orange-900/30 rounded-t-lg flex items-center justify-center group-hover:from-yellow-200 group-hover:to-orange-200 dark:group-hover:from-yellow-800/40 dark:group-hover:to-orange-800/40 transition-all duration-300 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=200&h=200&fit=crop&crop=center"
+                      alt="Chicken Burgers"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-2 text-center">
+                    <h4 className="text-sm font-bold text-foreground">
+                      Chicken
+                    </h4>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-accent group">
+                <CardContent className="p-0 h-full flex flex-col">
+                  <div className="flex-1 bg-gradient-to-br from-amber-100 to-red-100 dark:from-amber-900/30 dark:to-red-900/30 rounded-t-lg flex items-center justify-center group-hover:from-amber-200 group-hover:to-red-200 dark:group-hover:from-amber-800/40 dark:group-hover:to-red-800/40 transition-all duration-300 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&h=200&fit=crop&crop=center"
+                      alt="Beef Burgers"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-2 text-center">
+                    <h4 className="text-sm font-bold text-foreground">Beef</h4>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-primary group">
+                <CardContent className="p-0 h-full flex flex-col">
+                  <div className="flex-1 bg-gradient-to-br from-yellow-100 to-amber-100 dark:from-yellow-900/30 dark:to-amber-900/30 rounded-t-lg flex items-center justify-center group-hover:from-yellow-200 group-hover:to-amber-200 dark:group-hover:from-yellow-800/40 dark:group-hover:to-amber-800/40 transition-all duration-300 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=200&h=200&fit=crop&crop=center"
+                      alt="Sides"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-2 text-center">
+                    <h4 className="text-sm font-bold text-foreground">Sides</h4>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="aspect-square hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-accent group">
+                <CardContent className="p-0 h-full flex flex-col">
+                  <div className="flex-1 bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 rounded-t-lg flex items-center justify-center group-hover:from-green-200 group-hover:to-emerald-200 dark:group-hover:from-green-800/40 dark:group-hover:to-emerald-800/40 transition-all duration-300 overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&h=200&fit=crop&crop=center"
+                      alt="Salads"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-2 text-center">
+                    <h4 className="text-sm font-bold text-foreground">
+                      Salads
+                    </h4>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Design Guidelines */}
+          <Card className="bg-muted/50 mt-8">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-foreground mb-4">
+                Design Guidelines
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Layout</h4>
+                  <ul className="space-y-1 text-sm text-muted-foreground">
+                    <li>• Square aspect ratio for consistent grid layout</li>
+                    <li>• 4x2 grid on desktop, 2x4 on mobile</li>
+                    <li>• Large emoji icons for visual recognition</li>
+                    <li>• Category name prominently displayed</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">
+                    Interaction
+                  </h4>
+                  <ul className="space-y-1 text-sm text-muted-foreground">
+                    <li>• Gradient backgrounds that change on hover</li>
+                    <li>
+                      • Selected state with border and background highlight
+                    </li>
+                    <li>• Special badges for offers and kids meals</li>
+                    <li>• Touch-friendly sizing for kiosk interaction</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
     </div>
   );
 }
